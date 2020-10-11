@@ -42,3 +42,16 @@ TODO: I want to get @DrJZoidberg's commentary on what he thinks should go into h
 5. run the following command: `packer build packer build win10_1809_virtualbox_iso_to_finish.json`.
 
 ### Possible Install Type
+
+#### Base Installation
+
+The `win10_1809_virtualbox_iso_to_base.json` build will take an ISO and create a base windows vm, that is prepared for CommandoVM to install. This would be used well with a custom CommandoVM installation, where you would modify your profile to your likeing.
+
+#### Snapshot Installation
+
+The `win10_1809_virtualbox_snapshot_to_finish.json` build will take an already existing snapshot named: `commando-snapshot` (which you will have to create), and then do the CommandoVM installation for you with the default profile.
+
+**NOTE:** you will need to either have your username and password or a username and password created in order to use this install method:
+
+* username: `vagrant`
+* password: `vagrant`
