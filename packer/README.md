@@ -1,11 +1,9 @@
 
-CommandoVM & HashiCorp's Packer
-=============================
+# CommandoVM & HashiCorp's Packer
 
 Welcome to the packer builder of CommandoVM - a fully automated installation of the customizable commandvm platform.
 
-Requirements
-------------
+## Requirements
 
 * a hypervisor ( below are current hypervisors )
   * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
@@ -14,17 +12,14 @@ Requirements
 * 60 GB Hard Drive
 * 2 GB RAM
 
-Recommended
------------
+## Recommended
 
 * 80+ GB Hard Drive
 * 4+ GB RAM
 
-Instructions
-============
+# Instructions
 
-Standard install
-----------------
+## Standard install
 
 1. make sure you have all the [pre-reqs](#requirements).
 2. Download the zip from [https://github.com/fireeye/commando-vm](https://github.com/fireeye/commando-vm).
@@ -34,8 +29,7 @@ Standard install
   
 This will automate the whole process of creating the base vm, doing a windows installation, and then installing all the necessary CommandoVM components.
 
-Custom install
---------------
+## Custom install
 
 <!--
 TODO: I want to get @DrJZoidberg's commentary on what he thinks should go into here
@@ -46,3 +40,5 @@ TODO: I want to get @DrJZoidberg's commentary on what he thinks should go into h
 3. Decompress the zip and cd into the [win10_1809 folder](/packer/win10_1809/).
 4. Modify any of the .json files to your pleasure.
 5. run the following command: `packer build packer build win10_1809_virtualbox_iso_to_finish.json`.
+
+### Possible Install Type
