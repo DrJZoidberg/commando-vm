@@ -49,9 +49,11 @@ The `win10_1809_virtualbox_iso_to_base.json` build will take an ISO and create a
 
 #### Snapshot Installation
 
-The `win10_1809_virtualbox_snapshot_to_finish.json` build will take an already existing snapshot named: `commando-snapshot` (which you will have to create), and then do the CommandoVM installation for you with the default profile.
+The `win10_1809_virtualbox_snapshot_to_finish.json` build will take an already existing virtual machine name: `Windows_10_1809_x64_commando` ( rename your vm this or change this in the config if you don't want to use that name ) and a snapshot named: `Snapshot_1` (which you will have to create), and then do the CommandoVM installation for you with the default profile. Also, you will need to pass a parameter of `-var 'profile_file_name=<profile_you_want>'` to understand profiles better go [here](/Profiles/).
 
-**NOTE:** you will need to either have your username and password or a username and password created in order to use this install method:
+**NOTE:** you will need to either have your username and password or a username and password created in order to use this install method with Administrative rights to the vm:
 
 * username: `vagrant`
 * password: `vagrant`
+
+**NOTE:** you will need to configure your machine up to the CommandoVM standards (i.e. removing tamper protection, etc...), and also you will have to configure the machine similar to the following commands executed [here](/packer/win10_1809/floppy/Autounattend.xml)
