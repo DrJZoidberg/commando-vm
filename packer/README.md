@@ -24,28 +24,34 @@ Welcome to the packer builder of CommandoVM - a fully automated installation of 
 1. make sure you have all the [pre-reqs](#requirements).
 2. Download the zip from [https://github.com/fireeye/commando-vm](https://github.com/fireeye/commando-vm).
 3. Decompress the zip and cd into the [win10_1809 folder](/packer/win10_1809/).
-4. run the following command: `packer build packer build win10_1809_virtualbox_iso_to_finish.json`.
+4. run the following command: `packer build win10_1809_virtualbox_iso_to_finish.json`.
    > if you don't have packer in you path, then you will have to specify the full path to the packer binary.
   
 This will automate the whole process of creating the base vm, doing a windows installation, and then installing all the necessary CommandoVM components.
 
 ## Custom install
 
-<!--
-TODO: I want to get @DrJZoidberg's commentary on what he thinks should go into here
--->
-
 1. make sure you have all the [pre-reqs](#requirements).
 2. Download the zip from [https://github.com/fireeye/commando-vm](https://github.com/fireeye/commando-vm) into your Downloads folder.
 3. Decompress the zip and cd into the [win10_1809 folder](/packer/win10_1809/).
 4. Modify any of the .json files to your pleasure.
-5. run the following command: `packer build packer build win10_1809_virtualbox_iso_to_finish.json`.
+5. run the following command: `packer build win10_1809_virtualbox_iso_to_finish.json`.
+
+### Other resources
+
+* packer documentation: [https://www.packer.io/docs](https://www.packer.io/docs)
+* current builder(s):
+  * [Virtualbox](https://www.packer.io/docs/builders/virtualbox)
+* current provisioner(s):
+  * [File](https://www.packer.io/docs/provisioners/file)
+  * [Windows Shell](https://www.packer.io/docs/provisioners/windows-shell)
+  * [Windows Restart](https://www.packer.io/docs/provisioners/windows-restart)
 
 ### Possible Install Type
 
 #### Base Installation
 
-The `win10_1809_virtualbox_iso_to_base.json` build will take an ISO and create a base windows vm, that is prepared for CommandoVM to install. This would be used well with a custom CommandoVM installation, where you would modify your profile to your likeing.
+The `win10_1809_virtualbox_iso_to_base.json` build will take an ISO and create a base windows vm, that is prepared for CommandoVM to install. This would be used well with a custom CommandoVM installation, where you would modify your profile to your liking.
 
 #### Snapshot Installation
 
